@@ -1,3 +1,17 @@
+### `How to use`
+
+step 1
+install dependencies by command:
+
+npm i
+
+step 2
+run project by command
+
+npm start
+
+backend part on fireBase service. + realtime DataBase
+
 ### `teachers`
 
 GET
