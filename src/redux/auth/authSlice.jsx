@@ -6,8 +6,8 @@ const initialState = {
     name: null,
     email: null,
     uid: null,
+    theme: "gold",
   },
-  theme: "gold",
   isLoggedIn: false,
   isRefreshing: false,
 };
@@ -18,7 +18,6 @@ const authSlice = createSlice({
 
   reducers: {
     changeTheme: (state, action) => {
-      console.log(action.payload);
       state.user.theme = action.payload;
     },
   },
