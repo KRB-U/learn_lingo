@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { useToggleTheme } from "../../hooks/useToggleTheme";
 import {
   BenefitsContainer,
   BenefitsItem,
@@ -20,10 +18,6 @@ import {
 } from "./Home.styled";
 
 function Home() {
-  const { palette } = useToggleTheme();
-
-  useEffect(() => {}, [palette]);
-
   return (
     <div>
       <SectionOwnBothBlocks>

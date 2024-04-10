@@ -16,11 +16,14 @@ export const UserMenuBtn = styled.button`
 
   border-radius: 5px;
   padding: 5px 5px;
-  background-color: ${(props) => props.theme.theme.colors.gold};
+  border: 2px solid ${(props) => props.theme.colorTheme};
+  background-color: ${(props) => props.theme.colorTheme};
+  transition: background-color 0.3s, color 0.3s;
 
   &:hover,
   &:focus {
-    background-color: ${(props) => props.theme.theme.colors.getStartedBtn};
+    background-color: ${(props) => props.theme.colorTheme};
+    color: ${(props) => props.theme.theme.colors.white};
   }
 `;
 

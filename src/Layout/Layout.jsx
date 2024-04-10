@@ -5,7 +5,7 @@ import PulseLoader from "react-spinners/ClipLoader";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function Layout() {
+function Layout({ toggleTheme }) {
   const toglleTheme = (e) => {
     const data = e.target.textContent;
   };
@@ -23,7 +23,7 @@ function Layout() {
         }
       >
         <div style={{ width: "1184px", margin: "0 auto" }}>
-          <Header />
+          <Header toggleTheme={toggleTheme} />
         </div>
         <div style={{ width: "1312px", margin: "0 auto" }}>
           <Outlet />

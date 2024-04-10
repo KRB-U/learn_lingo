@@ -18,7 +18,8 @@ export const register = createAsyncThunk(
       const { user } = await createUserWithEmailAndPassword(
         auth,
         email,
-        password
+        password,
+        { theme: "" }
       );
 
       toast.success("successfully");

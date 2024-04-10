@@ -7,6 +7,7 @@ const initialState = {
     email: null,
     uid: null,
   },
+  theme: "gold",
   isLoggedIn: false,
   isRefreshing: false,
 };
@@ -15,7 +16,12 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
 
-  reducers: {},
+  reducers: {
+    changeTheme: (state, action) => {
+      console.log(action.payload);
+      state.user.theme = action.payload;
+    },
+  },
 
   extraReducers: (builder) => {
     builder
@@ -44,6 +50,7 @@ const authSlice = createSlice({
         state.user.name = action.payload.displayName;
         state.user.email = action.payload.email;
         state.user.uid = action.payload.uid;
+        // state.theme = action.payload;
 
         state.isLoggedIn = true;
         state.isRefreshing = false;
@@ -55,3 +62,4 @@ const authSlice = createSlice({
 });
 
 export const authReducer = authSlice.reducer;
+export const { changeTheme } = authSlice.actions;

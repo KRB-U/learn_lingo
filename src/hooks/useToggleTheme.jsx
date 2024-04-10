@@ -1,15 +1,17 @@
-import { useEffect, useState } from "react";
+// import { useState } from "react";
+import { changeTheme } from "../redux/auth/authSlice";
+import { useDispatch } from "react-redux";
 
 export const useToggleTheme = () => {
-  const [palette, setPalette] = useState("gold");
-  console.log(palette);
+  const dispatch = useDispatch();
 
+  // const [palette, setPalette] = useState("gold");
   const toggleTheme = (e) => {
     const val = e.currentTarget.value;
-    setPalette(val);
+    dispatch(changeTheme(val));
+
+    // setPalette(val);
   };
 
-  useEffect(() => {}, [palette]);
-
-  return { palette, toggleTheme };
+  return { toggleTheme };
 };

@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { useToggleTheme } from "../../hooks/useToggleTheme";
 
 export default function ThemeSwitcher() {
   // const [showTheme, setShowTheme] = useState(false);
-  const { toggleTheme, palette } = useToggleTheme();
-
-  useEffect(() => {}, [palette]);
+  const { toggleTheme } = useToggleTheme();
 
   // useEffect(() => {
   //   const handleKeyDown = (evt) => {
@@ -25,7 +22,15 @@ export default function ThemeSwitcher() {
 
   return (
     <div>
-      <select name="theme" onChange={toggleTheme}>
+      <select
+        name="theme"
+        onChange={toggleTheme}
+        style={{
+          cursor: "pointer",
+          borderRadius: "10px",
+          padding: "2px",
+        }}
+      >
         <option value="gold" name="theme">
           gold
         </option>

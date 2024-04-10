@@ -3,11 +3,12 @@ import { lazy, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 
 import Layout from "./Layout/Layout";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { refreshUser } from "./redux/auth/operations";
 import { useToggleTheme } from "./hooks/useToggleTheme";
 import { theme } from "./constants/theme";
 import { RestrictedRoute } from "./components/RestrictedRoute";
+import { selectTheme } from "./redux/auth/selectors";
 const colorTheme = theme.colors;
 const Home = lazy(() => import("./pages/Home/Home"));
 const Teachers = lazy(() => import("./pages/Teachers/Teachers"));
@@ -17,15 +18,15 @@ const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 function App() {
   const dispatch = useDispatch();
 
-  const { palette } = useToggleTheme();
+  const currentTheme = useSelector(selectTheme);
 
   useEffect(() => {
     dispatch(refreshUser());
-  }, [dispatch, palette]);
+  }, [dispatch]);
 
   return (
     <>
-      <ThemeProvider theme={{ theme, colorTheme: colorTheme[palette] }}>
+      <ThemeProvider theme={{ theme, colorTheme: colorTheme[currentTheme] }}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />}></Route>

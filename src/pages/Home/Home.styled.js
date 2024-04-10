@@ -42,10 +42,7 @@ export const TitleHomePageItem = styled.span`
   font-style: italic;
   font-weight: 400;
   line-height: 1;
-  background-color: ${(props) => {
-    console.log(props.theme.colorTheme);
-    return props.theme.colorTheme;
-  }};
+  background-color: ${(props) => props.theme.colorTheme};
 `;
 
 export const GetStartLink = styled(NavLink)`
@@ -56,7 +53,7 @@ export const GetStartLink = styled(NavLink)`
 
   &:hover,
   &:focus {
-    background-color: ${(props) => props.theme.theme.colors.lightYellow};
+    background-color: ${(props) => props.theme.theme.colors.gold};
   }
 
   font-weight: 700;
@@ -68,14 +65,14 @@ export const GetStartLink = styled(NavLink)`
   width: 267px;
   height: 60px;
 
-  background-color: ${(props) => props.theme.theme.colors.getStartedBtn};
+  background-color: ${(props) => props.theme.colorTheme};
 `;
 
 export const PicContainer = styled.div`
   position: relative;
   width: 568px;
   border-radius: 30px;
-  background-color: ${(props) => props.theme.theme.colors.lightYellow};
+  background-color: ${(props) => props.theme.colorTheme};
   overflow: hidden;
 `;
 
@@ -102,7 +99,7 @@ export const BenefitsSection = styled.div`
 
 export const BenefitsContainer = styled.div`
   display: flex;
-  border: 1.5px dashed ${(props) => props.theme.theme.colors.gold};
+  border: 1.5px dashed ${(props) => props.theme.colorTheme};
   border-radius: 30px;
   height: 116px;
   padding: 0 60px;
