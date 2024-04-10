@@ -18,7 +18,7 @@ import persistStore from "redux-persist/es/persistStore";
 const persistConfig = {
   key: "auth",
   storage,
-  whitelist: ["token"],
+  whitelist: ["user"],
 };
 
 export const store = configureStore({
