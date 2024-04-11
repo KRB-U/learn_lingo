@@ -25,6 +25,42 @@ body {
   tab-size: 4;
 }
 
+*::-webkit-scrollbar {
+  width: 10px; /* ширина прокрутки */
+  height: 10px; /* висота прокрутки */
+}
+
+/* Стилізація пальця прокрутки */
+*::-webkit-scrollbar-thumb {
+  background-color: #999; /* колір пальця прокрутки */
+  border-radius: 5px; /* радіус кутів повзунка */
+}
+
+/* Встановлення висоти повзунка на 80% від висоти модального вікна */
+*::-webkit-scrollbar-thumb:vertical {
+  height: 80%; /* висота повзунка */
+}
+
+/* Встановлення місця прокрутки на 80% від висоти модального вікна */
+*::-webkit-scrollbar-thumb:vertical {
+  margin-top: 10%; /* відступ зверху */
+}
+
+/* Стилізація фону прокрутки */
+*::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* колір фону прокрутки */
+}
+
+/* Стилізація прокрутки при наведенні */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* колір пальця прокрутки при наведенні */
+}
+
+/* Стилізація прокрутки при активному стані */
+*::-webkit-scrollbar-thumb:active {
+  background-color: #000; /* колір пальця прокрутки при активному стані (натискання) */
+}
+
 /* main {
   flex-grow: 1;
 } */

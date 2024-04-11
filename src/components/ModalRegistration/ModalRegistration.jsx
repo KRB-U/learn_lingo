@@ -1,8 +1,6 @@
 import Modal from "react-modal";
 import { Formik, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-// import { useDispatch } from "react-redux";
-import { toast } from "react-toastify";
 import { ClsBtn } from "../Buttons/ClsBtn/ClsBtn";
 import {
   DescriptReg,
@@ -27,6 +25,7 @@ Modal.defaultStyles = {
     right: 0,
     bottom: 0,
     backgroundColor: "rgba(0, 0, 0, 0.75)",
+    zIndex: 3,
   },
 
   content: {
@@ -92,16 +91,12 @@ const ModalRegistration = ({ isOpen, closeModal }) => {
                 />
                 <ErrorMessage
                   name="name"
-                  render={(msg) => {
-                    toast.error(msg);
-                  }}
+                  render={(msg) => <p style={{ color: "red" }}>{msg}</p>}
                 />
                 <InputField name="email" type="email" placeholder="Email" />
                 <ErrorMessage
                   name="email"
-                  render={(msg) => {
-                    toast.error(msg);
-                  }}
+                  render={(msg) => <p style={{ color: "red" }}>{msg}</p>}
                 />
                 <InputPasswordWrapper>
                   <InputField
@@ -111,9 +106,7 @@ const ModalRegistration = ({ isOpen, closeModal }) => {
                   />
                   <ErrorMessage
                     name="password"
-                    render={(msg) => {
-                      toast.error(msg);
-                    }}
+                    render={(msg) => <p style={{ color: "red" }}>{msg}</p>}
                   />
                   <EyeOff
                     onClick={handleTogglePassword}

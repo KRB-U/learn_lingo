@@ -2,7 +2,6 @@ import Modal from "react-modal";
 import { Formik, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 // import { useDispatch } from "react-redux";
-import { toast } from "react-toastify";
 import { ClsBtn } from "../Buttons/ClsBtn/ClsBtn";
 import { AuthBtn } from "../Buttons/AuthBtn/AuthBtn";
 import {
@@ -22,7 +21,7 @@ Modal.setAppElement("#modal");
 Modal.defaultStyles = {
   overlay: {
     position: "fixed",
-    zIndex: 10,
+    zIndex: 4,
     top: 0,
     left: 0,
     right: 0,
@@ -90,9 +89,7 @@ const ModalLogIn = ({ isOpen, closeModal }) => {
                 />
                 <ErrorMessage
                   name="email"
-                  render={(msg) => {
-                    toast.error(msg);
-                  }}
+                  render={(msg) => <p style={{ color: "red" }}>{msg}</p>}
                 />
                 <InputPasswordWrapper>
                   <InputField
@@ -108,9 +105,7 @@ const ModalLogIn = ({ isOpen, closeModal }) => {
 
                 <ErrorMessage
                   name="password"
-                  render={(msg) => {
-                    toast.error(msg);
-                  }}
+                  render={(msg) => <p style={{ color: "red" }}>{msg}</p>}
                 />
               </FieldWrapper>
               <AuthBtn buttonText="Log In"></AuthBtn>

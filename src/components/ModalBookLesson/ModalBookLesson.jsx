@@ -21,6 +21,7 @@ Modal.defaultStyles = {
 
   content: {
     maxWidth: "599px",
+    maxHeight: "99vh",
     padding: "64px",
     position: "absolute",
     top: "50%",
@@ -117,16 +118,12 @@ const ModalBookLesson = ({ isOpen, closeModal, teacher }) => {
               <s.InputField name="name" type="text" placeholder="Full Name" />
               <ErrorMessage
                 name="name"
-                render={(msg) => {
-                  toast.error(msg);
-                }}
+                render={(msg) => <p style={{ color: "red" }}>{msg}</p>}
               />
               <s.InputField name="email" type="email" placeholder="Email" />
               <ErrorMessage
                 name="email"
-                render={(msg) => {
-                  toast.error(msg);
-                }}
+                render={(msg) => <p style={{ color: "red" }}>{msg}</p>}
               />
               <s.InputField
                 name="phone"
@@ -135,9 +132,7 @@ const ModalBookLesson = ({ isOpen, closeModal, teacher }) => {
               />
               <ErrorMessage
                 name="phone"
-                render={(msg) => {
-                  toast.error(msg);
-                }}
+                render={(msg) => <p style={{ color: "red" }}>{msg}</p>}
               />
             </s.FieldWrapper>
             <AuthBtn buttonText="Book"></AuthBtn>
