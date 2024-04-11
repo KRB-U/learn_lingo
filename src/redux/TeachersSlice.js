@@ -42,6 +42,12 @@ export const teacherSlice = createSlice({
         (item) => item.id !== action.payload
       );
     },
+
+    resetFilter(state) {
+      state.filter.language = "";
+      state.filter.level = "";
+      state.filter.price = "";
+    },
   },
 
   // extraReducers: (builder) => {
@@ -68,4 +74,5 @@ export const {
   changeFilter,
   addFavoriteTeacher,
   removeFavoriteTeacher,
+  resetFilter,
 } = teacherSlice.actions;

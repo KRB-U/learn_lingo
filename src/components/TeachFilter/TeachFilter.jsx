@@ -38,22 +38,11 @@ function TeachFilter() {
             <FieldLabel htmlFor="languages">
               <FieldName>Languages</FieldName>
               <Field as={TeachField} name="languages" id="languages">
-                <option
-                  value=""
-                  style={{
-                    cursor: "pointer",
-                  }}
-                ></option>
+                <option value=""></option>
                 {languages.map((lang) => (
-                  <StyledOption
-                    key={lang}
-                    value={lang}
-                    style={{
-                      cursor: "pointer",
-                    }}
-                  >
+                  <option key={lang} value={lang}>
                     {lang}
-                  </StyledOption>
+                  </option>
                 ))}
               </Field>
             </FieldLabel>
