@@ -43,11 +43,17 @@ export const NavigateLink = styled(NavLink)`
   display: block;
   padding: 4px 0px;
 
+  text-decoration: none;
+
+  &.active {
+    color: ${(props) => props.theme.colorTheme};
+  }
+
   &.active::after {
     content: "";
     display: block;
     height: 2px;
-    background-color: ${(props) => props.theme.theme.colors.gold};
+    background-color: ${(props) => props.theme.colorTheme};
   }
 `;
 
