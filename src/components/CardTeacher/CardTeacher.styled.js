@@ -266,4 +266,8 @@ export const BookTrialLessonBtn = styled.button`
   border-radius: 12px;
   padding: 16px 40px;
   width: 232px;
+
+  &:hover {
+    background-color: ${(props) => props.theme.theme.colors.lightYellow};
+  }
 `;

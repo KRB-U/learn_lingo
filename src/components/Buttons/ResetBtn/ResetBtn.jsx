@@ -10,10 +10,10 @@ function ResetBtn() {
   const { resetForm } = useFormikContext();
 
   const handleReset = () => {
+    toast.success("cleared");
     resetForm();
     dispatch(resetFilter);
     window.location.reload();
-    toast.success("cleared");
   };
 
   return (

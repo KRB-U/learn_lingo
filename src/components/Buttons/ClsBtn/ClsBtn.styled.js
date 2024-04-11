@@ -13,6 +13,8 @@ export const CloseButtonStld = styled.button`
   cursor: pointer;
 
   margin-bottom: 12px;
+  &:hover {
+  }
 `;
 
 export const CloseButtonIcon = styled.svg`
@@ -23,4 +25,9 @@ export const CloseButtonIcon = styled.svg`
   stroke-width: 2.5;
   stroke-linecap: round;
   stroke-linejoin: round;
+  transition: transform 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;

@@ -10,4 +10,8 @@ export const AuthorizationButton = styled.button`
   font-weight: 700;
   font-size: 18px;
   line-height: 1.56;
+
+  &:hover {
+    background-color: ${(props) => props.theme.theme.colors.lightYellow};
+  }
 `;
