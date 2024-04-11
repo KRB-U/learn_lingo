@@ -56,7 +56,9 @@ function Teachers() {
           </>
         )}
       </ul>
-      {isLoadMore && <LoadMore handleLoadMore={handleLoadMore} />}
+      {filteredTeachers.length > 0 && isLoadMore && (
+        <LoadMore handleLoadMore={handleLoadMore} />
+      )}
     </div>
   );
 }
