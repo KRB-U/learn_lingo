@@ -46,10 +46,8 @@ export const TitleHomePageItem = styled.span`
 `;
 
 export const GetStartLink = styled(NavLink)`
-  /* &.active {
-    background-color: unset;
-    color: unset;
-  } */
+  text-decoration: none;
+  color: black;
 
   &:hover,
   &:focus {
