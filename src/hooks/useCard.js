@@ -36,9 +36,8 @@ export const useFavorite = (teacher) => {
       setFavorite(true);
     }
   }, [favorite, teacher.id]);
-
   const checkingFavorite = () => {
-    if (!user.uid) {
+    if (user === null) {
       toast.error("Please, Log In or register");
       return;
     }

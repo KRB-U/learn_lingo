@@ -43,7 +43,7 @@ export const logIn = createAsyncThunk(
       const { user } = await signInWithEmailAndPassword(auth, email, password);
       toast.success("Welcome");
 
-      return { user };
+      return { user, theme: "gold" };
     } catch (error) {
       toast.error("Incorrect email or password. Please try again.");
       return thunkAPI.rejectWithValue(error.message);

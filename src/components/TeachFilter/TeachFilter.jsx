@@ -3,7 +3,13 @@ import { Formik, Form, Field } from "formik";
 import { useDispatch } from "react-redux";
 import { changeFilter } from "../../redux/TeachersSlice";
 
-import { ContainerFilter, FieldLabel, FieldName } from "./TeachFilter.styled";
+import {
+  ContainerFilter,
+  FieldLabel,
+  FieldName,
+  StyledOption,
+  TeachField,
+} from "./TeachFilter.styled";
 
 import { ResetBtn } from "../Buttons/ResetBtn/ResetBtn";
 import { SubmitFilterBtn } from "../Buttons/SubmitFilterBtn.js/SubmitFilterBtn";
@@ -31,50 +37,29 @@ function TeachFilter() {
           <div style={{ display: "flex", gap: "20px", alignItems: "end" }}>
             <FieldLabel htmlFor="languages">
               <FieldName>Languages</FieldName>
-              <Field
-                as="select"
-                name="languages"
-                id="languages"
-                style={{
-                  border: "1px solid #8a8a89",
-                  borderRadius: "14px",
-                  fontSize: "14px",
-                  backgroundColor: "#fff",
-                  color: "#333",
-                  cursor: "pointer",
-                  padding: "8px 12px",
-                  overflowY: "auto",
-                  width: "221px",
-                  height: "48px",
-                }}
-              >
-                <option value=""></option>
+              <Field as={TeachField} name="languages" id="languages">
+                <option
+                  value=""
+                  style={{
+                    cursor: "pointer",
+                  }}
+                ></option>
                 {languages.map((lang) => (
-                  <option key={lang} value={lang}>
+                  <StyledOption
+                    key={lang}
+                    value={lang}
+                    style={{
+                      cursor: "pointer",
+                    }}
+                  >
                     {lang}
-                  </option>
+                  </StyledOption>
                 ))}
               </Field>
             </FieldLabel>
             <FieldLabel htmlFor="level">
               <FieldName>Level of knowledge</FieldName>
-              <Field
-                as="select"
-                name="level"
-                id="level"
-                style={{
-                  border: "1px solid #8a8a89",
-                  borderRadius: "14px",
-                  fontSize: "14px",
-                  backgroundColor: "#fff",
-                  color: "#333",
-                  cursor: "pointer",
-                  padding: "8px 12px",
-                  overflowY: "auto",
-                  width: "221px",
-                  height: "48px",
-                }}
-              >
+              <Field as={TeachField} name="level" id="level">
                 <option value=""></option>
 
                 {levels.map((level) => (
@@ -86,23 +71,7 @@ function TeachFilter() {
             </FieldLabel>
             <FieldLabel htmlFor="price">
               <FieldName>Price</FieldName>
-              <Field
-                as="select"
-                name="price"
-                id="price"
-                style={{
-                  border: "1px solid #8a8a89",
-                  borderRadius: "14px",
-                  fontSize: "14px",
-                  backgroundColor: "#fff",
-                  color: "#333",
-                  cursor: "pointer",
-                  padding: "8px 12px",
-                  overflowY: "auto",
-                  width: "221px",
-                  height: "48px",
-                }}
-              >
+              <Field as={TeachField} name="price" id="price">
                 <option value=""></option>
 
                 {Array.from({ length: 11 }, (_, index) => {

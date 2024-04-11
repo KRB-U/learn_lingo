@@ -83,7 +83,6 @@ const ModalBookLesson = ({ isOpen, closeModal, teacher }) => {
           validationSchema={validationSchema}
           onSubmit={(values) => {
             writeBookedLesson(values);
-            console.log(values);
           }}
         >
           <Form>

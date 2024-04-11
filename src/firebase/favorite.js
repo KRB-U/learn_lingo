@@ -41,7 +41,7 @@ export const fetchUserFavoritesItem = async (dispatch, userId) => {
       dispatch(addFavoriteTeacher(favData));
       //   return;
     } else {
-      toast.warning("No favorites found for this user.");
+      toast.warning("No favorites found");
       return null;
     }
   } catch (error) {

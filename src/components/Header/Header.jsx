@@ -10,7 +10,7 @@ import { AuthNav } from "../AuthNav/AuthNav";
 import { useAuth } from "../../hooks/useAuth";
 import { UserMenu } from "../UserMenu/UserMenu";
 
-function Header({ toggleTheme }) {
+function Header() {
   const { isLoggedIn } = useAuth();
 
   return (

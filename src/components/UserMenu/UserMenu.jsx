@@ -10,7 +10,7 @@ import {
 
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 
-export const UserMenu = ({ toggleTheme }) => {
+export const UserMenu = () => {
   const { user } = useAuth();
 
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ export const UserMenu = ({ toggleTheme }) => {
         LogOut
       </UserMenuBtn>
       <Divider />
-      <ThemeSwitcher toggleTheme={toggleTheme} />
+      <ThemeSwitcher />
     </UserMenuContainer>
   );
 };

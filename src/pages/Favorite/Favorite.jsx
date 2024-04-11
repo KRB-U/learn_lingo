@@ -17,7 +17,11 @@ function Favorite() {
     fetchUserFavoritesItem(dispatch, user.uid);
   }, [dispatch, user.uid]);
 
-  return (
+  return favorite.length === 0 ? (
+    <p style={{ textAlign: "center", fontWeight: "700", fontSize: "24px" }}>
+      Not found
+    </p>
+  ) : (
     <ul style={{ width: "1184px", margin: "0 auto" }}>
       {favorite.map((teacher) => (
         <CardTeacher teacher={teacher} />

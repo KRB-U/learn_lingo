@@ -20,8 +20,9 @@ export const FieldName = styled.span`
   color: ${(props) => props.theme.theme.colors.grayText};
 `;
 
-export const TeachField = styled(Field)`
-  border: none;
+export const TeachField = styled.select`
+  /* border: none; */
+  border: 1px solid #8a8a89;
   border-radius: 14px;
 
   font-size: 14px;
@@ -35,8 +36,9 @@ export const TeachField = styled(Field)`
 
   width: 221px;
   height: 48px;
+`;
 
-  &:focus {
-    cursor: pointer;
-  }
+export const StyledOption = styled.option`
+  color: red;
+  cursor: pointer;
 `;

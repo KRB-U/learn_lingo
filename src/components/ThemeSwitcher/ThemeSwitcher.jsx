@@ -1,24 +1,7 @@
-import PropTypes from "prop-types";
 import { useToggleTheme } from "../../hooks/useToggleTheme";
 
 export default function ThemeSwitcher() {
-  // const [showTheme, setShowTheme] = useState(false);
   const { toggleTheme } = useToggleTheme();
-
-  // useEffect(() => {
-  //   const handleKeyDown = (evt) => {
-  //     if (evt.code === "Escape") {
-  //       setShowTheme(false);
-  //     }
-  //   };
-  //   document.addEventListener("keydown", handleKeyDown);
-  //   // document.addEventListener("click", handleClickOutside);
-
-  //   return () => {
-  //     document.removeEventListener("keydown", handleKeyDown);
-  //     // document.removeEventListener("click", handleClickOutside);
-  //   };
-  // }, []);
 
   return (
     <div>
@@ -65,7 +48,3 @@ export default function ThemeSwitcher() {
     </div>
   );
 }
-
-ThemeSwitcher.propTypes = {
-  toggleTheme: PropTypes.func.isRequired,
-};

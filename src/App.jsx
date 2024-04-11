@@ -5,7 +5,6 @@ import { ThemeProvider } from "styled-components";
 import Layout from "./Layout/Layout";
 import { useDispatch, useSelector } from "react-redux";
 import { refreshUser } from "./redux/auth/operations";
-import { useToggleTheme } from "./hooks/useToggleTheme";
 import { theme } from "./constants/theme";
 import { RestrictedRoute } from "./components/RestrictedRoute";
 import { selectTheme } from "./redux/auth/selectors";
