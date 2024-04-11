@@ -28,12 +28,6 @@ function Teachers() {
   useEffect(() => {
     fetchTeachers(dispatch, amountCard);
     fetchAllTeachers(dispatch);
-
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.body.style.overflow = "auto";
-    };
   }, [dispatch, amountCard]);
 
   const handleLoadMore = () => {

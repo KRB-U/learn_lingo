@@ -25,18 +25,16 @@ Modal.defaultStyles = {
     right: 0,
     bottom: 0,
     backgroundColor: "rgba(0, 0, 0, 0.75)",
-    zIndex: 3,
   },
 
   content: {
     maxWidth: "565px",
     padding: "64px",
-
+    zIndex: 4,
     position: "absolute",
     top: "50%",
     left: "50%",
     transform: "translate(-50%,-50%)",
-
     background: "#fff",
     borderRadius: "30px",
     overflow: "hidden",

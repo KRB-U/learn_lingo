@@ -21,7 +21,6 @@ Modal.setAppElement("#modal");
 Modal.defaultStyles = {
   overlay: {
     position: "fixed",
-    zIndex: 4,
     top: 0,
     left: 0,
     right: 0,
@@ -32,12 +31,11 @@ Modal.defaultStyles = {
   content: {
     maxWidth: "565px",
     padding: "64px",
-
+    zIndex: 4,
     position: "absolute",
     top: "50%",
     left: "50%",
     transform: "translate(-50%,-50%)",
-
     background: "#fff",
     borderRadius: "30px",
     overflow: "hidden",
