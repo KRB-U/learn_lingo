@@ -9,7 +9,6 @@ export const selectFavorite = (state) => state.teachers.favorite;
 
 export const selectorLoading = (state) => state.teachers.isLoading;
 export const selectorLoadMore = (state) => state.teachers.isLoadMore;
-
 export const selectorError = (state) => state.teachers.error;
 
 export const selectVisibleTeach = createSelector(

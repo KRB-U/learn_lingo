@@ -1,12 +1,17 @@
+import { useSelector } from "react-redux";
 import { useToggleTheme } from "../../hooks/useToggleTheme";
+import { selectUser } from "../../redux/auth/selectors";
 
 export default function ThemeSwitcher() {
+  const currentFilter = useSelector(selectUser);
+
   const { toggleTheme } = useToggleTheme();
 
   return (
     <div>
       <select
         name="theme"
+        value={currentFilter.theme}
         onChange={toggleTheme}
         style={{
           cursor: "pointer",
