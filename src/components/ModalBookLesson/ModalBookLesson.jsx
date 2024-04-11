@@ -1,7 +1,6 @@
 import Modal from "react-modal";
 import { Formik, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { toast } from "react-toastify";
 import { ClsBtn } from "../Buttons/ClsBtn/ClsBtn";
 import * as s from "./ModalBookLesson.styled";
 import { AuthBtn } from "../Buttons/AuthBtn/AuthBtn";

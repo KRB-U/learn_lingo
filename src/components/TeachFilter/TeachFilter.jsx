@@ -7,7 +7,6 @@ import {
   ContainerFilter,
   FieldLabel,
   FieldName,
-  StyledOption,
   TeachField,
 } from "./TeachFilter.styled";
 

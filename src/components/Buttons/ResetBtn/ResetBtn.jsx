@@ -1,7 +1,7 @@
 import { useFormikContext } from "formik";
 import { ResetButton } from "./ResetBtn.styled";
 import { toast } from "react-toastify";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { resetFilter } from "../../../redux/TeachersSlice";
 
 function ResetBtn() {
