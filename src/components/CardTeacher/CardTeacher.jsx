@@ -11,6 +11,7 @@ export const CardTeacher = ({ teacher }) => {
     handleShowModal,
     handleShowReviewers,
     showReviewers,
+    handleLevelClick,
   } = useFavorite(teacher);
 
   return (
@@ -121,7 +122,9 @@ export const CardTeacher = ({ teacher }) => {
           <s.LevelingList>
             {teacher.levels.map((level, index) => (
               <s.LevelingItem key={index}>
-                <s.LevelingText>#{level}</s.LevelingText>
+                <s.LevelingText onClick={() => handleLevelClick(level)}>
+                  #{level}
+                </s.LevelingText>
               </s.LevelingItem>
             ))}
           </s.LevelingList>

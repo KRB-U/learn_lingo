@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectFavorite } from "../redux/selectors";
+import { selectAllTeachers, selectFavorite } from "../redux/selectors";
 import { useState } from "react";
 import { useLayoutEffect } from "react";
 
@@ -10,7 +10,7 @@ import {
   removeUserFavoriteItem,
   writeUserFavoriteItem,
 } from "../firebase/favorite";
-import { removeFavoriteTeacher } from "../redux/TeachersSlice";
+import { changeFilter, removeFavoriteTeacher } from "../redux/TeachersSlice";
 
 const auth = getAuth(appFireBase);
 
@@ -18,8 +18,22 @@ export const useFavorite = (teacher) => {
   const [showModal, setShowModal] = useState(false);
   const [isFavorite, setFavorite] = useState(false);
   const [showReviewers, setShowReviewers] = useState(false);
+
   const dispatch = useDispatch();
+  const amoutRes = useSelector(selectAllTeachers);
+
   const user = auth.currentUser;
+
+  const handleLevelClick = (e) => {
+    dispatch(
+      changeFilter({
+        language: "",
+        level: `${e}`,
+        price: "",
+      })
+    );
+    toast.success("done");
+  };
 
   const handleShowReviewers = () => {
     setShowReviewers((pS) => !pS);
@@ -60,5 +74,6 @@ export const useFavorite = (teacher) => {
     handleShowModal,
     handleShowReviewers,
     showReviewers,
+    handleLevelClick,
   };
 };

@@ -1,6 +1,6 @@
 import { Formik, Form, Field } from "formik";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { changeFilter } from "../../redux/TeachersSlice";
 
 import {
@@ -15,9 +15,11 @@ import { SubmitFilterBtn } from "../Buttons/SubmitFilterBtn.js/SubmitFilterBtn";
 
 import { languages, levels } from "./FilterValues";
 import { toast } from "react-toastify";
+import { selectFilters } from "../../redux/selectors";
 
 function TeachFilter() {
   const dispatch = useDispatch();
+  let { level: currentLevel } = useSelector(selectFilters);
 
   return (
     <Formik
@@ -48,7 +50,7 @@ function TeachFilter() {
             <FieldLabel htmlFor="level">
               <FieldName>Level of knowledge</FieldName>
               <Field as={TeachField} name="level" id="level">
-                <option value=""></option>
+                <option value={currentLevel}>{currentLevel}</option>
 
                 {levels.map((level) => (
                   <option key={level} value={level}>

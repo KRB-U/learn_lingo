@@ -241,12 +241,12 @@ export const LevelingItem = styled.li`
   border: 1px solid rgba(18, 20, 23, 0.2);
   border-radius: 35px;
   padding: 8px 12px;
-
+  cursor: pointer;
   width: auto;
   height: 32px;
 
   &:hover {
-    background-color: ${(props) => props.theme.theme.colors.gold};
+    background-color: ${(props) => props.theme.colorTheme};
   }
 `;
 

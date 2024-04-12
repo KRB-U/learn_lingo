@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   AutContainer,
   LogInLink,
-  LogInText,
   RegLink,
   RegText,
   StyledIcon,
