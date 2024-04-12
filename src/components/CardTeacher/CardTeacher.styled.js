@@ -198,7 +198,7 @@ export const AvatarReview = styled.div`
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(to bottom right, #f2f2f2, #e6e6e6);
+  background-color: ${(props) => props.theme.colorTheme.basic};
   margin-right: 12px;
 `;
 
@@ -243,6 +243,7 @@ export const LevelingItem = styled.li`
   padding: 8px 12px;
 
   cursor: pointer;
+
   background-color: ${(props) => props.theme.colorTheme.basic};
 
   width: auto;
