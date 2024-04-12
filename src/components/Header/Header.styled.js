@@ -49,12 +49,12 @@ export const NavigateLink = styled(NavLink)`
     color: ${(props) => props.theme.colorTheme};
   }
 
-  &.active::after {
+  /* &.active::after {
     content: "";
     display: block;
     height: 2px;
     background-color: ${(props) => props.theme.colorTheme};
-  }
+  } */
 `;
 
 export const AutContainer = styled.div`

@@ -47,10 +47,11 @@ export const TitleHomePageItem = styled.span`
 
 export const GetStartLink = styled(NavLink)`
   text-decoration: none;
-  color: black;
+  color: #121417;
 
   &:hover,
   &:focus {
+    color: black;
     background-color: ${(props) => props.theme.theme.colors.gold};
   }
 
@@ -76,7 +77,6 @@ export const PicContainer = styled.div`
 
 export const PicWomanContainer = styled.div`
   position: absolute;
-  z-index: 1;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -84,7 +84,6 @@ export const PicWomanContainer = styled.div`
 
 export const PicComputerContainer = styled.div`
   position: absolute;
-  z-index: 2;
   bottom: -26%;
   left: 50%;
   transform: translateX(-50%);

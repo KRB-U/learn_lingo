@@ -30,7 +30,7 @@ Modal.defaultStyles = {
   content: {
     maxWidth: "565px",
     padding: "64px",
-    zIndex: 4,
+    // zIndex: 4,
     position: "absolute",
     top: "50%",
     left: "50%",

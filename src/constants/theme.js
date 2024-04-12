@@ -20,15 +20,15 @@ export const theme = {
   },
 };
 
-export const themeColors = {
-  gold: "#F4C550",
-  lightYellow: "#FBE9BA",
-  lavender: "#9FBAAE",
-  lightBlue: "#CBDED3",
-  blueGray: "#9FB7CE",
-  lightSkyBlue: "#BFD6EA",
-  coral: "#E0A39A",
-  lightPink: "#F2C0BD",
-  melon: "#F0AA8D",
-  peach: "#F4C8BA",
-};
+// export const themeColors = {
+//   gold: "#F4C550",
+//   lightYellow: "#FBE9BA",
+//   lavender: "#9FBAAE",
+//   lightBlue: "#CBDED3",
+//   blueGray: "#9FB7CE",
+//   lightSkyBlue: "#BFD6EA",
+//   coral: "#E0A39A",
+//   lightPink: "#F2C0BD",
+//   melon: "#F0AA8D",
+//   peach: "#F4C8BA",
+// };
