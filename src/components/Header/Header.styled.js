@@ -42,8 +42,7 @@ export const NavigateList = styled.ul`
 export const NavigateLink = styled(NavLink)`
   display: block;
   padding: 4px 0px;
-
-  text-decoration: none;
+  color: black;
 
   &.active {
     color: ${(props) => props.theme.colorTheme};
@@ -53,13 +52,6 @@ export const NavigateLink = styled(NavLink)`
   &:focus {
     color: ${(props) => props.theme.colorTheme};
   }
-
-  /* &.active::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: ${(props) => props.theme.colorTheme};
-  } */
 `;
 
 export const AutContainer = styled.div`

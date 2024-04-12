@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectAllTeachers, selectFavorite } from "../redux/selectors";
+import { selectFavorite } from "../redux/selectors";
 import { useState } from "react";
 import { useLayoutEffect } from "react";
 
@@ -20,7 +20,6 @@ export const useFavorite = (teacher) => {
   const [showReviewers, setShowReviewers] = useState(false);
 
   const dispatch = useDispatch();
-  const amoutRes = useSelector(selectAllTeachers);
 
   const user = auth.currentUser;
 
