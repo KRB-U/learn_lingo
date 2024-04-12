@@ -65,9 +65,13 @@ export const AutContainer = styled.div`
 export const LogInLink = styled(NavLink)`
   display: flex;
   padding: 14px 16px 14px 0px;
-  &.active {
-    background-color: unset;
-    color: unset;
+
+  color: unset;
+  transition: color 0.4s ease;
+
+  &:hover,
+  &:focus {
+    color: ${(props) => props.theme.colorTheme};
   }
 `;
 
@@ -97,6 +101,12 @@ export const RegLink = styled(NavLink)`
   width: 166px;
   height: 48px;
   background-color: #121417;
+  transition: background-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: ${(props) => props.theme.colorTheme};
+  }
 `;
 
 export const RegText = styled.p`
