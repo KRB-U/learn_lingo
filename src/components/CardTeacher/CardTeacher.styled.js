@@ -100,8 +100,8 @@ export const RatingIcon = styled.svg`
   width: 16px;
   height: 16px;
   margin-right: 8px;
-  fill: #ffc531;
-  stroke: #ffc531;
+  fill: ${(props) => props.theme.colorTheme.basic};
+  stroke: ${(props) => props.theme.colorTheme.basic};
   stroke-width: 1.2;
 `;
 
@@ -198,7 +198,7 @@ export const AvatarReview = styled.div`
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: ${(props) => props.theme.colorTheme.basic};
+  background-color: ${(props) => props.theme.colorTheme.light};
   margin-right: 12px;
 `;
 
