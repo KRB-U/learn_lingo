@@ -71,7 +71,7 @@ export const PicContainer = styled.div`
   position: relative;
   width: 568px;
   border-radius: 30px;
-  background-color: ${(props) => props.theme.colorTheme.basic};
+  background-color: ${(props) => props.theme.colorTheme.light};
   overflow: hidden;
 `;
 
