@@ -16,12 +16,11 @@ export const AuthNav = () => {
   return (
     <>
       <AutContainer>
-        <LogInLink type="button" onClick={() => setShowLoginModal(true)}>
+        <LogInLink onClick={() => setShowLoginModal(true)}>
           <StyledIcon>
             <use href="./images/icons.svg#log-in"></use>
           </StyledIcon>
-
-          <LogInText>Log in</LogInText>
+          Log in
         </LogInLink>
         {showLoginModal && (
           <ModalLogIn
@@ -30,7 +29,7 @@ export const AuthNav = () => {
           />
         )}
 
-        <RegLink type="button" onClick={() => setShowRegistrationModal(true)}>
+        <RegLink onClick={() => setShowRegistrationModal(true)}>
           <RegText>Registration</RegText>
         </RegLink>
         {showRegistrationModal && (
