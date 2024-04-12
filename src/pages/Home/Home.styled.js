@@ -42,7 +42,7 @@ export const TitleHomePageItem = styled.span`
   font-style: italic;
   font-weight: 400;
   line-height: 1;
-  background-color: ${(props) => props.theme.colorTheme.basic};
+  background-color: ${(props) => props.theme.colorTheme.light};
 `;
 
 export const GetStartLink = styled(NavLink)`
