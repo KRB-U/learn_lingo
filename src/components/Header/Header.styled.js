@@ -45,12 +45,12 @@ export const NavigateLink = styled(NavLink)`
   color: black;
 
   &.active {
-    color: ${(props) => props.theme.colorTheme};
+    color: ${(props) => props.theme.colorTheme.basic};
   }
 
   &:hover,
   &:focus {
-    color: ${(props) => props.theme.colorTheme};
+    color: ${(props) => props.theme.colorTheme.light};
   }
 `;
 
@@ -62,22 +62,28 @@ export const AutContainer = styled.div`
 export const LogInLink = styled(NavLink)`
   display: flex;
   align-items: center;
-  padding: 14px 16px;
-  color: unset;
-  border: none;
-  border-radius: 14px;
-  background-color: transparent;
-  transition: transform, stroke 0.3s, box-shadow 0.3s;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
 
+  padding: 14px 16px;
+  color: ${(props) => props.theme.colorTheme.basic};
+
+  border: none;
+  border-radius: 14px;
+
+  background-color: transparent;
+  transition: transform, stroke 0.7s, box-shadow 0.7s;
+
   &:hover,
   &:focus {
-    color: ${(props) => props.theme.colorTheme};
+    color: ${(props) => props.theme.colorTheme.light};
     transform: translateY(-2px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    :first-child {
+      stroke: ${(props) => props.theme.colorTheme.light};
+    }
   }
 
   &:active {
@@ -90,13 +96,7 @@ export const StyledIcon = styled.svg`
   fill: none;
   width: 20px;
   height: 20px;
-  stroke: ${(props) => props.theme.colorTheme};
-  transition: stroke 0.4s ease;
-
-  &:hover,
-  &:focus {
-    stroke: ${(props) => props.theme.colorTheme};
-  }
+  stroke: ${(props) => props.theme.colorTheme.basic};
 
   margin-right: 8px;
   stroke-width: 2;
@@ -104,39 +104,45 @@ export const StyledIcon = styled.svg`
   stroke-linejoin: round;
 `;
 
-export const LogInText = styled.p`
+// export const LogInText = styled.p`
+//   font-weight: 700;
+//   font-size: 16px;
+//   line-height: 1.25;
+
+//   transition: stroke 0.4s ease;
+//   color: ${(props) => props.theme.colorTheme.basic};
+
+//   &:hover,
+//   &:focus {
+//     color: ${(props) => props.theme.colorTheme.light};
+//   }
+// `;
+
+export const RegLink = styled(NavLink)`
+  display: flex;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
 
-  transition: stroke 0.4s ease;
-
-  &:hover,
-  &:focus {
-    color: ${(props) => props.theme.colorTheme};
-  }
-`;
-
-export const RegLink = styled(NavLink)`
-  display: flex;
-
   border-radius: 12px;
   padding: 14px 39px;
+
   width: 166px;
   height: 48px;
-  background-color: #121417;
+  color: #fff;
+  background-color: ${(props) => props.theme.colorTheme.basic};
   transition: background-color 0.3s ease;
 
   &:hover,
   &:focus {
-    background-color: ${(props) => props.theme.colorTheme};
+    background-color: ${(props) => props.theme.colorTheme.light};
   }
 `;
 
-export const RegText = styled.p`
-  display: block;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-  color: #fff;
-`;
+// export const RegText = styled.p`
+//   display: block;
+//   font-weight: 700;
+//   font-size: 16px;
+//   line-height: 1.25;
+//   color: #fff;
+// `;

@@ -18,7 +18,7 @@ export const AvatartContainer = styled.div`
   width: 120px;
   height: 120px;
 
-  border: 3px solid ${(props) => props.theme.theme.colors.lightYellow};
+  border: 3px solid ${(props) => props.theme.colorTheme.basic};
   border-radius: 100px;
 
   padding: 5px;
@@ -127,9 +127,9 @@ export const HeartIcon = styled.svg`
   height: 26px;
 
   fill: ${({ $isFavorite, theme }) =>
-    $isFavorite ? theme.theme.colors.gold : "transparent"};
+    $isFavorite ? theme.colorTheme.basic : "transparent"};
   stroke: ${({ $isFavorite, theme }) =>
-    $isFavorite ? theme.theme.colors.gold : theme.theme.colors.blackText};
+    $isFavorite ? theme.colorTheme.basic : theme.theme.colors.blackText};
 
   stroke-width: ${({ $isFavorite }) => ($isFavorite ? "2" : "2")};
   stroke-linecap: round;
@@ -241,12 +241,15 @@ export const LevelingItem = styled.li`
   border: 1px solid rgba(18, 20, 23, 0.2);
   border-radius: 35px;
   padding: 8px 12px;
+
   cursor: pointer;
+  background-color: ${(props) => props.theme.colorTheme.basic};
+
   width: auto;
   height: 32px;
 
   &:hover {
-    background-color: ${(props) => props.theme.colorTheme};
+    background-color: ${(props) => props.theme.colorTheme.light};
   }
 `;
 
@@ -262,12 +265,13 @@ export const BookTrialLessonBtn = styled.button`
 
   cursor: pointer;
 
-  background-color: ${(props) => props.theme.theme.colors.gold};
+  background-color: ${(props) => props.theme.colorTheme.basic};
+
   border-radius: 12px;
   padding: 16px 40px;
   width: 232px;
 
   &:hover {
-    background-color: ${(props) => props.theme.theme.colors.lightYellow};
+    background-color: ${(props) => props.theme.colorTheme.light};
   }
 `;

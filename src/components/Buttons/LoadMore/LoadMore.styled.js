@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   border-radius: 10px;
-  background-color: ${(props) => props.theme.theme.colors.gold};
+  background-color: ${(props) => props.theme.colorTheme.basic};
 
   padding: 12px;
   width: 100%;
@@ -16,7 +16,7 @@ export const Button = styled.button`
 
   &:hover {
     color: ${(props) => props.theme.theme.colors.white};
-    background-color: ${(props) => props.theme.theme.colors.lightYellow};
+    background-color: ${(props) => props.theme.colorTheme.light};
 
     transition: color, background-color, 150ms linear, scale 150ms linear;
   }

@@ -3,7 +3,6 @@ import {
   AutContainer,
   LogInLink,
   RegLink,
-  RegText,
   StyledIcon,
 } from "../Header/Header.styled";
 import ModalLogIn from "../ModalLogIn/ModalLogIn";
@@ -29,7 +28,7 @@ export const AuthNav = () => {
         )}
 
         <RegLink onClick={() => setShowRegistrationModal(true)}>
-          <RegText>Registration</RegText>
+          Registration
         </RegLink>
         {showRegistrationModal && (
           <ModalRegistration

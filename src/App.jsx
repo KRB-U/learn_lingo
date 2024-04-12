@@ -8,7 +8,7 @@ import { refreshUser } from "./redux/auth/operations";
 import { theme } from "./constants/theme";
 import { RestrictedRoute } from "./components/RestrictedRoute";
 import { selectTheme } from "./redux/auth/selectors";
-const colorTheme = theme.colors;
+const colorTheme = theme;
 const Home = lazy(() => import("./pages/Home/Home"));
 const Teachers = lazy(() => import("./pages/Teachers/Teachers"));
 const Favorite = lazy(() => import("./pages/Favorite/Favorite"));

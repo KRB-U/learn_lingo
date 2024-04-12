@@ -1,4 +1,4 @@
-import { SubmitButton } from "./ResetBtn.styled";
+import { SubmitButton } from "./SubmitFilterBtn.styled";
 
 function SubmitFilterBtn() {
   return <SubmitButton type="submit">Search</SubmitButton>;

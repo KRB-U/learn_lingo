@@ -14,15 +14,15 @@ export const UserMenuBtn = styled.button`
   font-weight: 500;
   cursor: pointer;
 
-  border-radius: 5px;
+  border-radius: 6px;
   padding: 5px 5px;
-  border: 2px solid ${(props) => props.theme.colorTheme};
-  background-color: ${(props) => props.theme.colorTheme};
+
+  background-color: ${(props) => props.theme.colorTheme.basic};
   transition: background-color 0.3s, color 0.3s;
 
   &:hover,
   &:focus {
-    background-color: ${(props) => props.theme.colorTheme};
+    background-color: ${(props) => props.theme.colorTheme.light};
     color: ${(props) => props.theme.theme.colors.white};
   }
 `;

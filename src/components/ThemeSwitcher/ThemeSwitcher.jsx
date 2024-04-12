@@ -20,34 +20,23 @@ export default function ThemeSwitcher() {
         }}
       >
         <option value="gold" name="theme">
-          gold
+          Gold
         </option>
-        <option value="lightYellow" name="theme">
-          lightYellow
-        </option>
+
         <option value="lavender" name="theme">
-          lavender
+          Lavender
         </option>
-        <option value="lightBlue" name="theme">
-          lightBlue
-        </option>
+
         <option value="blueGray" name="theme">
-          blueGray
+          BlueGray
         </option>
-        <option value="lightSkyBlue" name="theme">
-          lightSkyBlue
-        </option>
+
         <option value="coral" name="theme">
-          coral
+          Coral
         </option>
-        <option value="lightPink" name="theme">
-          lightPink
-        </option>
+
         <option value="melon" name="theme">
-          melon
-        </option>
-        <option value="peach" name="theme">
-          peach
+          Melon
         </option>
       </select>
     </div>
